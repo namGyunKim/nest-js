@@ -1,0 +1,74 @@
+# Compiled output
+/dist/
+/build/
+
+# Dependency directories
+/node_modules/
+jspm_packages/
+bower_components/
+
+# Logs
+/logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Operating System specific files
+.DS_Store
+Thumbs.db
+
+# Testing outputs
+/coverage/
+/.nyc_output/
+
+# IDEs and Editors
+/.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.vs/
+.atom/
+.history/
+
+# IDE - VSCode specific settings
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Environment configuration files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Temporary files
+.temp/
+.tmp/
+*.swp
+*.swo
+*.bak
+*.tmp
+*.temp
+*~
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Bundler output
+/public/assets
+/public/build
