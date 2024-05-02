@@ -3,6 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { MemberEntity } from '../entity/MemberEntity';
 import { CreateMemberRequest } from '../payload/request/CreateMemberRequest';
+import { CreateResponseGlobal } from '../../../global/payload/response/CreateResponseGlobal';
 
 @Injectable()
 export class MemberService {
@@ -11,9 +12,11 @@ export class MemberService {
     private memberRepository: Repository<MemberEntity>,
   ) {}
 
-  async createMember(request: CreateMemberRequest): Promise<number> {
+  async createMember(
+    request: CreateMemberRequest,
+  ): Promise<CreateResponseGlobal> {
     const newMember = this.memberRepository.create(request);
-    const memberEntityPromise = this.memberRepository.save(newMember);
-    return (await memberEntityPromise).id;
+    const memberEntity = await this.memberRepository.save(newMember);
+    return new CreateResponseGlobal(memberEntity.id);
   }
 }

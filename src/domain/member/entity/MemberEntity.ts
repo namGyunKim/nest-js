@@ -8,7 +8,7 @@ export class MemberEntity {
   @Column({ length: 100 })
   name: string; // 'name' 컬럼, 최대 길이 100
 
-  @Column({ unique: true, length: 200 })
+  @Column({ length: 200 })
   email: string; // 고유한 'email' 컬럼, 최대 길이 200
 
   @Column({ length: 200 })
