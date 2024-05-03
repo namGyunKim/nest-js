@@ -3,7 +3,6 @@ export function throwIfNull<T>(
   exception: Error,
 ): T {
   if (value === null || value === undefined) {
-    console.log(value);
     throw exception;
   }
   return value;
