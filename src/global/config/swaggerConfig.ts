@@ -1,4 +1,4 @@
-// src/global/config/SwaggerConfig.ts
+// src/global/config/swaggerConfig.ts
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { INestApplication } from '@nestjs/common';
 

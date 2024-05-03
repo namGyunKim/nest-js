@@ -1,6 +1,6 @@
 import { Body, Controller, Post } from '@nestjs/common';
-import { MemberMutationService } from './operations/mutation/MemberMutationService';
-import { CreateMemberRequest } from './dto/CreateMemberRequest';
+import { MemberMutationService } from './operations/mutation/memberMutationService';
+import { CreateMemberRequest } from './dto/createMemberRequest';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
 
 @Controller('/member')
