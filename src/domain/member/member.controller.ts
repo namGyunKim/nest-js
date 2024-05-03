@@ -18,7 +18,7 @@ export class MemberController {
     return this.memberMutationService.createMember(createMemberRequest);
   }
 
-  @Get('find-one-by-id')
+  @Get('find-one-by-id/:id')
   @ApiOperation({ summary: '회원 조회' })
   async getMemberById(@Param('id') id: number) {
     return this.memberQueryService.getMemberById(id);
