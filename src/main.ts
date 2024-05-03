@@ -4,6 +4,7 @@ import { AppModule } from './app.module';
 import { SwaggerModule } from '@nestjs/swagger';
 import { createSwaggerConfig } from './global/config/swagger.config';
 import { HttpExceptionFilter } from './global/error/exception-filter';
+import { LoggingInterceptor } from './global/interceptor/log.interceptor';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -14,6 +15,10 @@ async function bootstrap() {
 
   // 예외 필터
   app.useGlobalFilters(new HttpExceptionFilter());
+  //   로그 인터셉터
+
+  app.useGlobalInterceptors(new LoggingInterceptor());
+
   await app.listen(3000);
 }
 
