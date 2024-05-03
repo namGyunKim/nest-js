@@ -1,12 +1,12 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { MemberEntity } from '../entity/MemberEntity';
-import { CreateMemberRequest } from '../payload/request/CreateMemberRequest';
-import { CreateResponseGlobal } from '../../../global/payload/response/CreateResponseGlobal';
+import { MemberEntity } from '../../models/MemberEntity';
+import { CreateMemberRequest } from '../../dto/CreateMemberRequest';
+import { CreateResponseGlobal } from '../../../../global/dto/CreateResponseGlobal';
 
 @Injectable()
-export class MemberService {
+export class MemberMutationService {
   constructor(
     @InjectRepository(MemberEntity)
     private memberRepository: Repository<MemberEntity>,
