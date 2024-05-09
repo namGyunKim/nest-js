@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { MemberEntity } from '../../models/member.entity';
-import { CreateMemberRequest } from '../../inpus/create-member.request';
+import { CreateMemberRequest } from '../../inputs/create-member.request';
 import { CreateGlobalResponse } from '../../../../global/dto/create-global.response';
 import * as bcrypt from 'bcrypt';
 

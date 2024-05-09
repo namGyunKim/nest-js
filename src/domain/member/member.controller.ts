@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { MemberMutationService } from './operations/mutation/member-mutation.service';
-import { CreateMemberRequest } from './inpus/create-member.request';
+import { CreateMemberRequest } from './inputs/create-member.request';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import { MemberQueryService } from './operations/query/member-query.service';
 
